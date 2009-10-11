@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           Feedsportal Ads-Skipper
-// @namespace      Feedsportal Ads-Skipper
+// @namespace      http://github.com/bodo/userscripts
 // @description    Remove Feedsportal Ads
 // @include        http://da.feedsportal.com/*
 // ==/UserScript==
