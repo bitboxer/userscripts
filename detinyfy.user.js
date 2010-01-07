@@ -44,17 +44,26 @@
     function getFaceBookUri(url) {
         return unescape(getPartOfUrl(url, "u"));
     }
-    
-    allLinks = document.getElementsByTagName('a');
-    for (var i = 0; i < allLinks.length; i++) {
-        link = allLinks[i];
-        if (checkTinyUrl(link.href)){
-            link.href = "http://detinyfy.de/load_url?url="+escape(link.href);
-        } else if (checkFacebook(link.href)) {
-            url = getFaceBookUri(link.href);
-            if (checkTinyUrl(url)) {
-                link.href = "http://detinyfy.de/load_url?url="+escape(url);
+
+    function linkify() {
+        allLinks = document.getElementsByTagName('a');
+        for (var i = 0; i < allLinks.length; i++) {
+            link = allLinks[i];
+            if (checkTinyUrl(link.href)){
+                link.href = "http://detinyfy.de/load_url?url="+escape(link.href);
+            } else if (checkFacebook(link.href)) {
+                url = getFaceBookUri(link.href);
+                if (checkTinyUrl(url)) {
+                    link.href = "http://detinyfy.de/load_url?url="+escape(url);
+                }
             }
         }
     }
+
+    function nodeInserted(e) {
+        linkify();
+    }
+
+    document.addEventListener("DOMNodeInserted", nodeInserted, false);
+    linkify();
 })();
