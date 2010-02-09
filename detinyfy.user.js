@@ -16,7 +16,7 @@
                              "xn--ogi.ws","xn--vgi.ws","xn--egi.ws","xn--9gi.ws","xn-5hgi.ws","xn--1ci.ws",
                              "xn--odi.ws","xn--rei.ws","xn--cgw.ws", "ow.ly", "redir.ec", "urlzen.com", "mhtweet.com",
                              "twitpwr.com", "spdlink.de", "rly.cc", "u.nu", "icio.us", "trim.li/nk", "digs.by",
-                             "url4.eu", "j.mp");
+                             "url4.eu", "j.mp", "goo.gl", "goo.gl/fb", "fb.me", "lnk.ms", "buq.in");
     
     var regExpQM = new RegExp("^http://(fastix.org/go|chilp.it/)\\?(\\w)*$");
     var regExp = new RegExp("^http://(www.)?(" + services.join("|") + ")/(\\w|-|#|%)+$", "i");
